@@ -81,8 +81,8 @@ O projeto foi configurado com arquitetura estática (SSG) de altíssima performa
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/juliodev10/portifolio.git
-cd portifolio
+git clone https://github.com/juliodev10/Portifolio.git
+cd Portifolio
 ```
 
 ### 2. Instalar as dependências
@@ -122,7 +122,7 @@ Este projeto está pronto para deploy instantâneo na Vercel sem configurações
 
 2. Acesse [vercel.com](https://vercel.com/) e faça login com sua conta do GitHub.
 3. Clique em **"Add New..."** -> **"Project"**.
-4. Selecione o repositório `portifolio`.
+4. Selecione o repositório `Portifolio`.
 5. A Vercel detectará automaticamente o framework como **Next.js**.
 6. Clique em **"Deploy"**.
 7. Pronto! Em poucos segundos o portfólio estará online com certificado SSL gratuito e CDN global.
