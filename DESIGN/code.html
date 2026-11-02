@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Júlio César | Desenvolvedor Full-Stack, WordPress &amp; Administrador Salesforce</title>
+<meta content="Portfólio Profissional de Júlio César França Rodrigues - Estudante de Ciência da Computação, Desenvolvedor Full-Stack, WordPress e Administrador Salesforce." name="description"/>
+<!-- Google Fonts Inter & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+            },
+            salesforce: {
+              light: '#00A1E0',
+              DEFAULT: '#0176D3',
+              dark: '#032D60'
+            }
+          },
+          backgroundImage: {
+            'glow-gradient': 'radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15), transparent 70%)',
+            'radial-sf': 'radial-gradient(circle at 100% 100%, rgba(1, 118, 211, 0.12), transparent 60%)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- Lucide Icons CDN -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090d16;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+
+    .glass-card {
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .glass-card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card-hover:hover {
+      border-color: rgba(99, 102, 241, 0.35);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 32px -12px rgba(99, 102, 241, 0.15);
+    }
+
+    .badge-glow {
+      box-shadow: 0 0 15px -2px rgba(16, 185, 129, 0.4);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .accent-gradient-text {
+      background: linear-gradient(135deg, #818cf8 0%, #38bdf8 50%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-[#030712] text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white relative overflow-x-hidden min-h-screen">
+<!-- Background decorative light grids -->
+<div class="fixed inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-25 pointer-events-none z-0"></div>
+<div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-glow-gradient pointer-events-none z-0"></div>
+<div class="fixed bottom-0 right-0 w-[600px] h-[600px] bg-radial-sf pointer-events-none z-0"></div>
+<!-- HEADER / NAVBAR -->
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Logo -->
+<a class="flex items-center gap-2 group" href="#hero">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500/20 to-sky-500/20 border border-indigo-500/30 flex items-center justify-center font-mono font-bold text-indigo-400 group-hover:border-indigo-400 transition-colors">
+          &lt;/&gt;
+        </div>
+<span class="font-mono text-lg font-bold tracking-tight text-white group-hover:text-indigo-400 transition-colors">
+          &lt;<span class="text-indigo-400">JulioDev</span> /&gt;
+        </span>
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+<a class="hover:text-indigo-400 transition-colors" href="#sobre">Sobre</a>
+<a class="hover:text-indigo-400 transition-colors" href="#skills">Habilidades</a>
+<a class="hover:text-indigo-400 transition-colors" href="#projetos">Projetos</a>
+<a class="hover:text-indigo-400 transition-colors" href="#formacao">Formação</a>
+<a class="hover:text-indigo-400 transition-colors" href="#contato">Contato</a>
+</nav>
+<!-- Action Buttons -->
+<div class="hidden sm:flex items-center gap-3">
+<a class="p-2.5 rounded-xl border border-slate-800 hover:border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-300 hover:text-white transition-all flex items-center justify-center" href="https://github.com/juliodev10" rel="noopener noreferrer" target="_blank" title="Acessar GitHub">
+<i class="w-4 h-4" data-lucide="github"></i>
+</a>
+<a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm transition-all shadow-lg shadow-indigo-600/25 hover:shadow-indigo-600/40" href="#contato">
+<i class="w-4 h-4" data-lucide="file-down"></i>
+<span>Baixar CV</span>
+</a>
+</div>
+<!-- Mobile Menu Toggle Button -->
+<button aria-label="Abrir menu" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-900 transition-colors" id="mobile-menu-btn">
+<i class="w-6 h-6" data-lucide="menu"></i>
+</button>
+</div>
+<!-- Mobile Navigation Drawer -->
+<div class="hidden md:hidden px-4 pt-2 pb-6 bg-slate-950 border-b border-slate-800 space-y-3" id="mobile-nav">
+<a class="block py-2 text-slate-300 hover:text-indigo-400 font-medium" href="#sobre">Sobre</a>
+<a class="block py-2 text-slate-300 hover:text-indigo-400 font-medium" href="#skills">Habilidades</a>
+<a class="block py-2 text-slate-300 hover:text-indigo-400 font-medium" href="#projetos">Projetos</a>
+<a class="block py-2 text-slate-300 hover:text-indigo-400 font-medium" href="#formacao">Formação</a>
+<a class="block py-2 text-slate-300 hover:text-indigo-400 font-medium" href="#contato">Contato</a>
+<div class="pt-4 border-t border-slate-800 flex items-center gap-3">
+<a class="w-full text-center py-2.5 rounded-xl border border-slate-800 bg-slate-900 text-slate-200 text-sm font-medium" href="https://github.com/juliodev10" target="_blank">GitHub</a>
+<a class="w-full text-center py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-medium" href="#contato">Baixar CV</a>
+</div>
+</div>
+</header>
+<!-- MAIN CONTENT CONTAINER -->
+<main class="relative z-10 pt-28 pb-20">
+<!-- HERO SECTION -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 flex flex-col items-center text-center" id="hero">
+<!-- Status Badge -->
+<div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-950/40 text-emerald-300 text-xs sm:text-sm font-medium mb-8 badge-glow animate-pulse">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+<span>Disponível para Estágio em Desenvolvimento &amp; Salesforce</span>
+</div>
+<!-- Main Title -->
+<h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-5xl leading-[1.1] mb-6">
+<span class="gradient-text">Olá, sou Júlio César.</span><br/>
+<span class="accent-gradient-text">Desenvolvedor Full-Stack &amp; Administrador Salesforce.</span>
+</h1>
+<!-- Subtitle -->
+<p class="max-w-3xl text-base sm:text-xl text-slate-400 font-normal leading-relaxed mb-10">
+        Estudante de Ciência da Computação com experiência prática na construção de sistemas reais de ponta a ponta — de plataformas SaaS, sites em WordPress e aplicações mobile a customizações e automações avançadas no ecossistema Salesforce.
+      </p>
+<!-- CTAs -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-base transition-all shadow-xl shadow-indigo-600/30 hover:scale-[1.02] active:scale-[0.98]" href="#projetos">
+<i class="w-5 h-5" data-lucide="layers"></i>
+<span>Ver Projetos em Produção</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-200 font-semibold text-base transition-all hover:scale-[1.02] active:scale-[0.98]" href="#contato">
+<i class="w-5 h-5" data-lucide="mail"></i>
+<span>Entrar em Contato</span>
+</a>
+</div>
+<!-- Quick Metrics Bar -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 mt-16 max-w-4xl w-full pt-10 border-t border-slate-800/80">
+<div class="p-4 rounded-xl bg-slate-900/30 border border-slate-800/50">
+<div class="text-2xl sm:text-3xl font-mono font-bold text-white mb-1">6+</div>
+<div class="text-xs sm:text-sm text-slate-400 font-medium">Sistemas Reais &amp; Em Produção</div>
+</div>
+<div class="p-4 rounded-xl bg-slate-900/30 border border-slate-800/50">
+<div class="text-2xl sm:text-3xl font-mono font-bold text-indigo-400 mb-1">Full-Stack &amp; CMS</div>
+<div class="text-xs sm:text-sm text-slate-400 font-medium">PHP, Laravel, WordPress, Next &amp; Node</div>
+</div>
+<div class="p-4 rounded-xl bg-slate-900/30 border border-slate-800/50">
+<div class="text-2xl sm:text-3xl font-mono font-bold text-sky-400 mb-1">Trailhead</div>
+<div class="text-xs sm:text-sm text-slate-400 font-medium">Admin, Flows, Apex &amp; LWC</div>
+</div>
+<div class="p-4 rounded-xl bg-slate-900/30 border border-slate-800/50">
+<div class="text-2xl sm:text-3xl font-mono font-bold text-emerald-400 mb-1">Dez/2027</div>
+<div class="text-xs sm:text-sm text-slate-400 font-medium">Previsão Bacharelado em CC</div>
+</div>
+</div>
+</section>
+<!-- SECTION SOBRE MIM -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" id="sobre">
+<div class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-800/80 relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-8 space-y-6">
+<div class="inline-flex items-center gap-2 text-indigo-400 font-mono text-sm tracking-wider uppercase font-semibold">
+<i class="w-4 h-4" data-lucide="terminal"></i>
+<span>Sobre Mim &amp; Filosofia de Trabalho</span>
+</div>
+<h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+              Perfil pragmático, foco em negócios e engenharia mão na massa.
+            </h2>
+<p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+              Embora esteja buscando ativamente meu <strong>primeiro estágio formal na área</strong>, já desenvolvo, hospedo e mantenho em produção sistemas completos para clientes, portais em WordPress, projetos de extensão e soluções em CRM, unindo visão de regras de negócio, modelagem de dados e engenharia de software em ambientes Linux e Windows.
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+<div class="flex items-start gap-3 p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+<div class="p-2 rounded-lg bg-indigo-500/10 text-indigo-400 mt-0.5">
+<i class="w-5 h-5" data-lucide="code-2"></i>
+</div>
+<div>
+<h4 class="font-semibold text-white text-sm">Do Banco de Dados à UI &amp; Deploy</h4>
+<p class="text-xs text-slate-400 mt-1">Criação de ponta a ponta: schema design, APIs seguras, painéis administrativos, portais CMS e interfaces modernas responsivas.</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+<div class="p-2 rounded-lg bg-sky-500/10 text-sky-400 mt-0.5">
+<i class="w-5 h-5" data-lucide="cloud-lightning"></i>
+</div>
+<div>
+<h4 class="font-semibold text-white text-sm">Ecossistema Salesforce</h4>
+<p class="text-xs text-slate-400 mt-1">Configuração de CRM, automações com Flow Builder, modelagem de dados, Apex backend e componentes LWC.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Highlight Box -->
+<div class="lg:col-span-4 flex flex-col gap-4">
+<div class="p-6 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 relative">
+<span class="text-xs font-mono uppercase tracking-wider text-slate-400 block mb-2">Objetivo Atual</span>
+<p class="text-sm font-semibold text-white leading-normal mb-4">
+                "Integrar uma equipe de tecnologia inovadora onde eu possa aplicar minha velocidade de aprendizado, consistência na entrega e agregar valor imediato como estagiário."
+              </p>
+<div class="space-y-2 text-xs text-slate-300 font-mono">
+<div class="flex items-center gap-2 text-emerald-400">
+<i class="w-4 h-4" data-lucide="check-circle-2"></i>
+<span>Disponibilidade imediata</span>
+</div>
+<div class="flex items-center gap-2 text-emerald-400">
+<i class="w-4 h-4" data-lucide="check-circle-2"></i>
+<span>Facilidade de comunicação</span>
+</div>
+<div class="flex items-center gap-2 text-emerald-400">
+<i class="w-4 h-4" data-lucide="check-circle-2"></i>
+<span>Proatividade comprovada em projetos</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION HABILIDADES TÉCNICAS -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="skills">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<div class="inline-flex items-center gap-2 text-indigo-400 font-mono text-sm tracking-wider uppercase font-semibold mb-2">
+<i class="w-4 h-4" data-lucide="cpu"></i>
+<span>Stack Tecnológica</span>
+</div>
+<h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Habilidades &amp; Ferramentas</h2>
+<p class="text-slate-400 text-sm sm:text-base mt-3">Competências estruturadas por camadas de arquitetura, unindo frameworks robustos, CMS profissional, mobilidade e CRM corporativo.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- CARD 1: BACK-END & CMS -->
+<div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center mb-5">
+<i class="w-6 h-6" data-lucide="server"></i>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Back-end &amp; CMS</h3>
+<p class="text-xs text-slate-400 mb-4">Construção de APIs RESTful, regras de negócios, arquiteturas MVC escaláveis e soluções CMS.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">PHP 8.3</span>
+<span class="px-2.5 py-1 rounded-md bg-indigo-950/60 border border-indigo-500/30 text-xs font-mono text-indigo-300 font-semibold">Laravel 11</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">CodeIgniter 4</span>
+<span class="px-2.5 py-1 rounded-md bg-sky-950/60 border border-sky-500/30 text-xs font-mono text-sky-300 font-semibold">WordPress (Dev &amp; Gestão)</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Node.js</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Express</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Python</span>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-slate-800/80 text-[11px] text-slate-500 font-mono">
+            Arquitetura MVC • Clean Code • Auth JWT/Tokens
+          </div>
+</div>
+<!-- CARD 2: FRONT-END & MOBILE -->
+<div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center mb-5">
+<i class="w-6 h-6" data-lucide="layout"></i>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Front-end &amp; Mobile</h3>
+<p class="text-xs text-slate-400 mb-4">Interfaces reativas, mobile-first, ricas em usabilidade e painéis administrativos.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-md bg-sky-950/60 border border-sky-500/30 text-xs font-mono text-sky-300 font-semibold">React</span>
+<span class="px-2.5 py-1 rounded-md bg-sky-950/60 border border-sky-500/30 text-xs font-mono text-sky-300 font-semibold">Next.js</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">TypeScript</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">React Native</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Expo</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Tailwind CSS</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Livewire</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Filament PHP</span>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-slate-800/80 text-[11px] text-slate-500 font-mono">
+            SPA / SSR • Design Responsivo • UX Moderno
+          </div>
+</div>
+<!-- CARD 3: ECOSSISTEMA SALESFORCE -->
+<div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between border-sky-500/30">
+<div>
+<div class="w-12 h-12 rounded-xl bg-salesforce/20 border border-salesforce/40 text-salesforce-light flex items-center justify-center mb-5">
+<i class="w-6 h-6" data-lucide="cloud"></i>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<h3 class="text-lg font-bold text-white">Salesforce</h3>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-mono bg-sky-500/20 text-sky-300 border border-sky-500/40">Destaque</span>
+</div>
+<p class="text-xs text-slate-400 mb-4">Administração corporativa, automações declarativas e desenvolvimento Apex/LWC.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-md bg-sky-950/60 border border-sky-500/30 text-xs font-mono text-sky-300 font-semibold">Salesforce Admin</span>
+<span class="px-2.5 py-1 rounded-md bg-sky-950/60 border border-sky-500/30 text-xs font-mono text-sky-300 font-semibold">Apex</span>
+<span class="px-2.5 py-1 rounded-md bg-sky-950/60 border border-sky-500/30 text-xs font-mono text-sky-300 font-semibold">LWC</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Flow Builder</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Custom Objects</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Perfis &amp; Permissões</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Reports/Dashboards</span>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-slate-800/80 text-[11px] text-slate-500 font-mono">
+            SOQL/SOSL • Triggers • Trailhead Hands-on
+          </div>
+</div>
+<!-- CARD 4: BANCO, DEVOPS & INFRA -->
+<div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-5">
+<i class="w-6 h-6" data-lucide="database"></i>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">DevOps &amp; Banco</h3>
+<p class="text-xs text-slate-400 mb-4">Persistência relacional e não-relacional, conteinerização, servidores e gestão de hospedagem.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-md bg-emerald-950/60 border border-emerald-500/30 text-xs font-mono text-emerald-300 font-semibold">Hospedagem / DNS</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Linux (Ubuntu)</span>
+<span class="px-2.5 py-1 rounded-md bg-emerald-950/60 border border-emerald-500/30 text-xs font-mono text-emerald-300 font-semibold">Docker</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Apache / Nginx</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">MySQL</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">PostgreSQL</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">MongoDB</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Prisma ORM</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Git / GitHub</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Postman</span>
+<span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Figma</span>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-slate-800/80 text-[11px] text-slate-500 font-mono">
+            CI/CD • Nginx / Apache • Modelagem ER
+          </div>
+</div>
+</div>
+</section>
+<!-- SECTION PROJETOS EM DESTAQUE & SOLUÇÕES EM PRODUÇÃO -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" id="projetos">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+<div>
+<div class="inline-flex items-center gap-2 text-indigo-400 font-mono text-sm tracking-wider uppercase font-semibold mb-2">
+<i class="w-4 h-4" data-lucide="folder-git-2"></i>
+<span>Cases de Sucesso &amp; Aplicações</span>
+</div>
+<h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Projetos em Destaque &amp; Soluções em Produção</h2>
+<p class="text-slate-400 text-sm sm:text-base mt-2 max-w-xl">
+            Soluções completas desenhadas para resolver dores reais de negócio, clientes locais, portais ativos na web e arquiteturas corporativas de CRM.
+          </p>
+</div>
+<div class="mt-4 md:mt-0">
+<a class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 text-sm font-semibold transition-colors" href="https://github.com/juliodev10" target="_blank">
+<span>Ver todos no GitHub</span>
+<i class="w-4 h-4" data-lucide="arrow-up-right"></i>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- PROJETO 1: Food EcoLógico -->
+<div class="glass-card glass-card-hover rounded-3xl p-8 border border-slate-800 relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-4 mb-4">
+<span class="px-3 py-1 rounded-full text-xs font-mono font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                Em Produção - Cliente Real
+              </span>
+<span class="text-xs font-mono text-slate-500">Delivery &amp; Gestão</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-3">Food EcoLógico</h3>
+<p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Sistema completo desenvolvido sob medida para um restaurante real. Integra pedidos online com a <strong>API oficial do WhatsApp</strong>, possui painel <strong>KDS (Kitchen Display System)</strong> em tempo real para a cozinha, rastreamento status-a-status para o cliente e controle financeiro de fluxo de caixa operacional.
+            </p>
+<div class="mb-6 space-y-2">
+<h4 class="text-xs font-mono uppercase tracking-wider text-slate-400">Problema Resolvido:</h4>
+<p class="text-xs text-slate-300 bg-slate-900/80 p-3 rounded-xl border border-slate-800/80">
+                Eliminou erros manuais de anotação de comandas, reduziu em 35% o tempo de fila na cozinha e centralizou o canal de vendas digital sem taxas abusivas de marketplaces.
+              </p>
+</div>
+<!-- Tech Stack Tags -->
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-indigo-300">CodeIgniter 4</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">PHP 8.3</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-sky-300">Next.js</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">React Native (Expo)</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">Node.js</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-300">MySQL</span>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-6 border-t border-slate-800">
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white text-xs font-medium transition-colors" href="https://github.com/juliodev10" target="_blank">
+<i class="w-4 h-4" data-lucide="github"></i>
+<span>Repositório</span>
+</a>
+<span class="text-xs text-slate-400 flex items-center gap-1.5 ml-auto">
+<i class="w-3.5 h-3.5 text-emerald-400" data-lucide="check-circle"></i>
+<span>Full-Stack &amp; Mobile</span>
+</span>
+</div>
+</div>
+<!-- PROJETO 2: SaaS para Casamentos -->
+<div class="glass-card glass-card-hover rounded-3xl p-8 border border-slate-800 relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-4 mb-4">
+<span class="px-3 py-1 rounded-full text-xs font-mono font-medium bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                Arquitetura Multi-Tenant
+              </span>
+<span class="text-xs font-mono text-slate-500">SaaS Corporativo</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-3">Plataforma SaaS para Casamentos</h3>
+<p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Plataforma multi-tenant inspirada no modelo do Casar.com para criação e personalização de sites de casamento pelos noivos, lista de presentes virtuais com checkout e confirmação automatizada de presença (RSVP), acompanhada de especificações técnicas formais (PRD e FSD).
+            </p>
+<div class="mb-6 space-y-2">
+<h4 class="text-xs font-mono uppercase tracking-wider text-slate-400">Problema Resolvido:</h4>
+<p class="text-xs text-slate-300 bg-slate-900/80 p-3 rounded-xl border border-slate-800/80">
+                Permite isolamento de tenancy de alta performance com backoffice administrativo poderoso gerado via Filament e formulários reativos sem recarregar a página com Livewire.
+              </p>
+</div>
+<!-- Tech Stack Tags -->
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-indigo-300">Laravel 11</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">PHP 8.3</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-amber-300">Filament PHP v3</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-pink-300">Livewire</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-sky-300">Tailwind CSS</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-300">MySQL 8</span>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-6 border-t border-slate-800">
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white text-xs font-medium transition-colors" href="https://github.com/juliodev10" target="_blank">
+<i class="w-4 h-4" data-lucide="github"></i>
+<span>Repositório</span>
+</a>
+<span class="text-xs text-slate-400 flex items-center gap-1.5 ml-auto">
+<i class="w-3.5 h-3.5 text-indigo-400" data-lucide="check-circle"></i>
+<span>PRD &amp; FSD Documentados</span>
+</span>
+</div>
+</div>
+<!-- PROJETO 3: Soluções CRM Salesforce -->
+<div class="glass-card glass-card-hover rounded-3xl p-8 border border-sky-500/40 relative flex flex-col justify-between lg:col-span-2 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950">
+<div>
+<div class="flex items-center justify-between gap-4 mb-4">
+<span class="px-3 py-1 rounded-full text-xs font-mono font-medium bg-sky-500/10 text-sky-400 border border-sky-500/30 flex items-center gap-1.5">
+<i class="w-3.5 h-3.5" data-lucide="cloud"></i>
+                Salesforce Enterprise Solution
+              </span>
+<span class="text-xs font-mono text-sky-400 font-semibold">TravelCorp / Leitura Force</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-3">Administração &amp; Soluções CRM Salesforce</h3>
+<p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Atuação prática como Administrador Salesforce e Desenvolvedor na arquitetura e configuração de ambientes corporativos complexos no Trailhead. Implementação completa de objetos e campos customizados, regras de validação estritas, modelo de segurança por Perfis e Permission Sets, automação declarativa com <strong>Flow Builder</strong> e extensão de regras por código utilizando <strong>Apex Triggers/Classes</strong> e <strong>Lightning Web Components (LWC)</strong>.
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+<div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800">
+<div class="text-xs font-mono text-sky-400 font-bold mb-1">Automação de Processos</div>
+<div class="text-xs text-slate-300">Flows acionados por registro, scheduled flows e aprovações sem escrever código quando possível (clicks first).</div>
+</div>
+<div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800">
+<div class="text-xs font-mono text-sky-400 font-bold mb-1">Apex &amp; LWC Custom</div>
+<div class="text-xs text-slate-300">Triggers com bulkification, classes com SOQL otimizado e componentes LWC modernos para páginas de registro.</div>
+</div>
+<div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800">
+<div class="text-xs font-mono text-sky-400 font-bold mb-1">Segurança &amp; Governança</div>
+<div class="text-xs text-slate-300">Controle rigoroso OWD (Organization-Wide Defaults), Role Hierarchies, Sharing Rules e Field-Level Security.</div>
+</div>
+</div>
+<!-- Tech Stack Tags -->
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2.5 py-1 rounded-lg bg-sky-950/60 border border-sky-500/30 text-xs font-mono text-sky-300 font-semibold">Salesforce CRM</span>
+<span class="px-2.5 py-1 rounded-lg bg-sky-950/60 border border-sky-500/30 text-xs font-mono text-sky-300">Flow Builder</span>
+<span class="px-2.5 py-1 rounded-lg bg-sky-950/60 border border-sky-500/30 text-xs font-mono text-sky-300">Apex Classes &amp; Triggers</span>
+<span class="px-2.5 py-1 rounded-lg bg-sky-950/60 border border-sky-500/30 text-xs font-mono text-sky-300">Lightning Web Components (LWC)</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">SOQL / SOSL</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">Lightning App Builder</span>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-6 border-t border-slate-800">
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold transition-colors" href="https://trailhead.salesforce.com" target="_blank">
+<i class="w-4 h-4" data-lucide="external-link"></i>
+<span>Ver Trilha Trailhead</span>
+</a>
+<span class="text-xs text-slate-400 flex items-center gap-1.5 ml-auto">
+<i class="w-3.5 h-3.5 text-sky-400" data-lucide="shield-check"></i>
+<span>Configuração Homologada</span>
+</span>
+</div>
+</div>
+<!-- PROJETO 4: Portal Mensageiros Eternos & Sistema Oficina (NOVO) -->
+<div class="glass-card glass-card-hover rounded-3xl p-8 border border-sky-500/30 relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-4 mb-4">
+<span class="px-3 py-1 rounded-full text-xs font-mono font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                Em Produção - Portal &amp; Subdomínio
+              </span>
+<span class="text-xs font-mono text-slate-500">WordPress &amp; Infra</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-3">Portal Mensageiros Eternos &amp; Sistema Oficina</h3>
+<p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Desenvolvimento completo, configuração de hospedagem, domínio/subdomínio e administração utilizando <strong>WordPress</strong> e tecnologias web. Inclui o portal institucional principal e a aplicação/sistema em subdomínio oficina.
+            </p>
+<div class="mb-6 space-y-2">
+<h4 class="text-xs font-mono uppercase tracking-wider text-slate-400">Entrega de Infraestrutura &amp; CMS:</h4>
+<p class="text-xs text-slate-300 bg-slate-900/80 p-3 rounded-xl border border-slate-800/80">
+                Arquitetura web completa com roteamento de DNS, provisionamento de subdomínio dedicado, SSL, painel de administração dinâmico e otimizações de performance para conteúdo ao vivo.
+              </p>
+</div>
+<!-- Tech Stack Tags -->
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2.5 py-1 rounded-lg bg-sky-950/60 border border-sky-500/30 text-xs font-mono text-sky-300 font-semibold">WordPress</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-indigo-300">PHP</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-300">MySQL</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">HTML5 / CSS3</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-teal-300">Gestão de Hospedagem / DNS / Subdomínios</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-3 pt-6 border-t border-slate-800">
+<a class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition-colors shadow-sm" href="https://mensageiroseternos.com/" rel="noopener noreferrer" target="_blank">
+<i class="w-4 h-4" data-lucide="globe"></i>
+<span>Visitar Portal</span>
+</a>
+<a class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 text-xs font-semibold transition-colors" href="https://oficina.mensageiroseternos.com/oficina/" rel="noopener noreferrer" target="_blank">
+<i class="w-4 h-4" data-lucide="external-link"></i>
+<span>Acessar Oficina</span>
+</a>
+<span class="text-xs text-slate-400 flex items-center gap-1.5 ml-auto">
+<i class="w-3.5 h-3.5 text-emerald-400" data-lucide="check-circle"></i>
+<span>No Ar</span>
+</span>
+</div>
+</div>
+<!-- PROJETO 5: OdontoPro / DevControle -->
+<div class="glass-card glass-card-hover rounded-3xl p-8 border border-slate-800 relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-4 mb-4">
+<span class="px-3 py-1 rounded-full text-xs font-mono font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                SaaS Full-Stack Moderno
+              </span>
+<span class="text-xs font-mono text-slate-500">Gestão Clínica</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-3">OdontoPro / DevControle</h3>
+<p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Aplicação web full-stack para gerenciamento de clínicas e controle operacional com login multi-usuário seguro via <strong>Auth.js (NextAuth v5)</strong>, modelagem no <strong>Prisma ORM</strong> com persistência no <strong>MongoDB Atlas</strong> e deploy escalável na <strong>Vercel</strong>.
+            </p>
+<div class="mb-6 space-y-2">
+<h4 class="text-xs font-mono uppercase tracking-wider text-slate-400">Problema Resolvido:</h4>
+<p class="text-xs text-slate-300 bg-slate-900/80 p-3 rounded-xl border border-slate-800/80">
+                Centralização de agendamentos e prontuários com autenticação moderna Server-Side e banco em nuvem de alta disponibilidade.
+              </p>
+</div>
+<!-- Tech Stack Tags -->
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-sky-300">Next.js 14</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">TypeScript</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-purple-300">Auth.js v5</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-300">Prisma ORM</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-green-300">MongoDB Atlas</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">Vercel</span>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-6 border-t border-slate-800">
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white text-xs font-medium transition-colors" href="https://github.com/juliodev10" target="_blank">
+<i class="w-4 h-4" data-lucide="github"></i>
+<span>Repositório</span>
+</a>
+<span class="text-xs text-slate-400 flex items-center gap-1.5 ml-auto">
+<i class="w-3.5 h-3.5 text-purple-400" data-lucide="check-circle"></i>
+<span>Server Actions &amp; NoSQL</span>
+</span>
+</div>
+</div>
+<!-- PROJETO 6: Landing Page & Triagem Inteligente -->
+<div class="glass-card glass-card-hover rounded-3xl p-8 border border-slate-800 relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-4 mb-4">
+<span class="px-3 py-1 rounded-full text-xs font-mono font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                Alta Conversão Mobile-First
+              </span>
+<span class="text-xs font-mono text-slate-500">Saúde &amp; Fonoaudiologia</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-3">Landing Page &amp; Triagem Inteligente</h3>
+<p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Aplicação de alta performance voltada para consultório de fonoaudiologia. Otimizou em mais de 50% a captação de novos pacientes através de uma esteira de triagem interativa pré-formatada que encaminha o diagnóstico preliminar diretamente para o WhatsApp da especialista.
+            </p>
+<div class="mb-6 space-y-2">
+<h4 class="text-xs font-mono uppercase tracking-wider text-slate-400">Impacto Mensurado:</h4>
+<p class="text-xs text-slate-300 bg-slate-900/80 p-3 rounded-xl border border-slate-800/80">
+                Experiência de triagem sem atrito que qualifica o lead antes do primeiro contato profissional, gerando leads já prontos para atendimento.
+              </p>
+</div>
+<!-- Tech Stack Tags -->
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-orange-400">HTML5 Semântico</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-sky-400">Tailwind CSS</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-yellow-300">JavaScript ES6+</span>
+<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-300">WhatsApp Direct API</span>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-6 border-t border-slate-800">
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white text-xs font-medium transition-colors" href="https://github.com/juliodev10" target="_blank">
+<i class="w-4 h-4" data-lucide="github"></i>
+<span>Repositório</span>
+</a>
+<span class="text-xs text-slate-400 flex items-center gap-1.5 ml-auto">
+<i class="w-3.5 h-3.5 text-emerald-400" data-lucide="check-circle"></i>
+<span>PageSpeed 98+</span>
+</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION EDUCAÇÃO & CERTIFICAÇÕES (TIMELINE) -->
+<section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20" id="formacao">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<div class="inline-flex items-center gap-2 text-indigo-400 font-mono text-sm tracking-wider uppercase font-semibold mb-2">
+<i class="w-4 h-4" data-lucide="graduation-cap"></i>
+<span>Jornada Acadêmica &amp; Formação</span>
+</div>
+<h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Educação &amp; Certificações</h2>
+<p class="text-slate-400 text-sm sm:text-base mt-2">Fundamentação contínua em Ciência da Computação aliada a certificações industriais.</p>
+</div>
+<!-- Timeline Container -->
+<div class="relative border-l border-slate-800 ml-4 sm:ml-8 space-y-12">
+<!-- ITEM 1: Bacharelado -->
+<div class="relative pl-8 sm:pl-10">
+<div class="absolute -left-3.5 top-1.5 w-7 h-7 rounded-full bg-slate-950 border-2 border-indigo-500 flex items-center justify-center text-indigo-400 shadow-md shadow-indigo-500/20">
+<i class="w-3.5 h-3.5" data-lucide="book-open"></i>
+</div>
+<div class="glass-card rounded-2xl p-6 sm:p-7 border border-slate-800">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+<h3 class="text-lg sm:text-xl font-bold text-white">Bacharelado em Ciência da Computação</h3>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-medium bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 w-fit">
+                Previsão de Conclusão: Dezembro / 2027
+              </span>
+</div>
+<div class="text-sm font-medium text-indigo-400 mb-3">Universidade Cruzeiro do Sul Virtual</div>
+<p class="text-sm text-slate-300 leading-relaxed">
+              Formação superior em fundamentos de Ciência da Computação: algoritmos, estruturas de dados avançadas, complexidade, arquitetura de computadores, redes e bancos de dados relacionais e não-relacionais.
+            </p>
+</div>
+</div>
+<!-- ITEM 2: Salesforce Trails -->
+<div class="relative pl-8 sm:pl-10">
+<div class="absolute -left-3.5 top-1.5 w-7 h-7 rounded-full bg-slate-950 border-2 border-sky-400 flex items-center justify-center text-sky-400 shadow-md shadow-sky-400/20">
+<i class="w-3.5 h-3.5" data-lucide="cloud"></i>
+</div>
+<div class="glass-card rounded-2xl p-6 sm:p-7 border border-slate-800">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+<h3 class="text-lg sm:text-xl font-bold text-white">Salesforce Administrator &amp; Developer Trails</h3>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-medium bg-sky-500/10 text-sky-300 border border-sky-500/20 w-fit">
+                Trailhead Hands-on
+              </span>
+</div>
+<div class="text-sm font-medium text-sky-400 mb-3">Salesforce Trailhead</div>
+<p class="text-sm text-slate-300 leading-relaxed mb-4">
+              Domínio da plataforma de CRM #1 do mundo: configuração avançada de segurança e compartilhamento, automações de processos críticos via Flow Builder, desenvolvimento backend customizado em Apex (Classes, Triggers, SOQL) e interfaces com Lightning Web Components (LWC).
+            </p>
+<div class="flex items-center gap-2 text-xs font-mono text-slate-400">
+<span class="w-2 h-2 rounded-full bg-sky-400"></span>
+<span>Superbadges &amp; Badges em Admin, Developer &amp; App Builder</span>
+</div>
+</div>
+</div>
+<!-- ITEM 3: Android Studio Mobile -->
+<div class="relative pl-8 sm:pl-10">
+<div class="absolute -left-3.5 top-1.5 w-7 h-7 rounded-full bg-slate-950 border-2 border-emerald-400 flex items-center justify-center text-emerald-400 shadow-md shadow-emerald-400/20">
+<i class="w-3.5 h-3.5" data-lucide="smartphone"></i>
+</div>
+<div class="glass-card rounded-2xl p-6 sm:p-7 border border-slate-800">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+<h3 class="text-lg sm:text-xl font-bold text-white">Desenvolvimento Mobile com Android Studio</h3>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-medium bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 w-fit">
+                Fevereiro / 2026
+              </span>
+</div>
+<div class="text-sm font-medium text-emerald-400 mb-3">Fundação Bradesco</div>
+<p class="text-sm text-slate-300 leading-relaxed">
+              Construção de aplicações nativas, ciclo de vida de Activities e Fragments, layouts responsivos, integração com componentes de sistema e consumo de APIs.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION CONTATO & FOOTER -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12" id="contato">
+<div class="glass-card rounded-3xl p-8 sm:p-14 border border-indigo-500/30 text-center relative overflow-hidden bg-gradient-to-b from-slate-900/90 to-slate-950">
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.15),transparent_70%)] pointer-events-none"></div>
+<div class="max-w-3xl mx-auto relative z-10">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono mb-6">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+<span>Contratação Imediata • Estágio</span>
+</div>
+<h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+            Procurando um estagiário dedicado que domina desenvolvimento Full-Stack, WordPress e Administração Salesforce? Vamos conversar!
+          </h2>
+<p class="text-lg text-slate-300 mb-10 leading-relaxed">
+            Tenho sede de aprender, bagagem técnica prática e capacidade de entregar valor desde o primeiro dia. Vamos bater um papo sobre suas oportunidades!
+          </p>
+<!-- Contact Buttons Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+<!-- Email -->
+<a class="p-4 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-indigo-500/50 transition-all flex flex-col items-center justify-center gap-2 group" href="mailto:juliofranca490@gmail.com">
+<div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 group-hover:scale-110 transition-transform flex items-center justify-center">
+<i class="w-5 h-5" data-lucide="mail"></i>
+</div>
+<span class="text-xs font-mono text-slate-400">E-mail Direto</span>
+<span class="text-sm font-semibold text-white break-all">juliofranca490@gmail.com</span>
+</a>
+<!-- GitHub -->
+<a class="p-4 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-indigo-500/50 transition-all flex flex-col items-center justify-center gap-2 group" href="https://github.com/juliodev10" rel="noopener noreferrer" target="_blank">
+<div class="w-10 h-10 rounded-xl bg-slate-800 text-white group-hover:scale-110 transition-transform flex items-center justify-center">
+<i class="w-4 h-4" data-lucide="github"></i>
+</div>
+<span class="text-xs font-mono text-slate-400">Repositórios</span>
+<span class="text-sm font-semibold text-white">github.com/juliodev10</span>
+</a>
+<!-- Trailhead -->
+<a class="p-4 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-sky-500/50 transition-all flex flex-col items-center justify-center gap-2 group" href="https://trailhead.salesforce.com" rel="noopener noreferrer" target="_blank">
+<div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 group-hover:scale-110 transition-transform flex items-center justify-center">
+<i class="w-5 h-5" data-lucide="cloud"></i>
+</div>
+<span class="text-xs font-mono text-slate-400">Salesforce</span>
+<span class="text-sm font-semibold text-white">Perfil no Trailhead</span>
+</a>
+<!-- LinkedIn -->
+<a class="p-4 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-blue-500/50 transition-all flex flex-col items-center justify-center gap-2 group" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 group-hover:scale-110 transition-transform flex items-center justify-center">
+<i class="w-5 h-5" data-lucide="linkedin"></i>
+</div>
+<span class="text-xs font-mono text-slate-400">Conexão Profissional</span>
+<span class="text-sm font-semibold text-white">LinkedIn / JulioDev</span>
+</a>
+</div>
+<div class="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 font-mono gap-4">
+<div>
+              © 2025 Júlio César França Rodrigues • Feito com código limpo e arquitetura moderna.
+            </div>
+<div class="flex items-center gap-4">
+<span>Next.js • Tailwind • WordPress • Salesforce</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Mobile nav toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    menuBtn.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+    });
+
+    // Close mobile nav when clicking a link
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.add('hidden');
+      });
+    });
+  </script>
+</body></html>
