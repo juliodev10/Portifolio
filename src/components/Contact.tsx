@@ -107,7 +107,7 @@ export default function Contact() {
 
             {/* Salesforce Trailhead */}
             <a
-              href="https://trailhead.salesforce.com"
+              href="https://www.salesforce.com/trailblazer/rhvo4n01pxq904c2fk"
               target="_blank"
               rel="noopener noreferrer"
               className="p-5 rounded-2xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-sky-500/50 transition-all flex flex-col items-center justify-center gap-3 group"

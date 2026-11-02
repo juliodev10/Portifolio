@@ -315,7 +315,7 @@ export default function Projects() {
             </div>
             <div className="flex items-center gap-3 pt-6 border-t border-slate-800">
               <a
-                href="https://trailhead.salesforce.com"
+                href="https://www.salesforce.com/trailblazer/rhvo4n01pxq904c2fk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold transition-colors shadow-sm"
