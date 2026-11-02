@@ -54,7 +54,7 @@ export default function Hero() {
       {/* Quick Metrics Bar */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-16 max-w-4xl w-full pt-10 border-t border-slate-800/80">
         <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60 transition-all hover:border-slate-700">
-          <div className="text-2xl sm:text-3xl font-mono font-bold text-white mb-1">6+</div>
+          <div className="text-2xl sm:text-3xl font-mono font-bold text-white mb-1">9+</div>
           <div className="text-xs sm:text-sm text-slate-400 font-medium">
             Sistemas Reais &amp; Em Produção
           </div>

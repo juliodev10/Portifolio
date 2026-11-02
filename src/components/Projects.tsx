@@ -147,18 +147,18 @@ export default function Projects() {
           </div>
         )}
 
-        {/* PROJETO 2: Portal Mensageiros Eternos & Sistema Oficina (EM PRODUÇÃO) */}
+        {/* PROJETO 2: Portal Mensageiros Eternos, Loja Virtual & Sistema Oficina (EM PRODUÇÃO) */}
         {(activeCategory === 'all' || activeCategory === 'wordpress') && (
           <div className="glass-card glass-card-hover rounded-3xl p-8 border border-sky-500/30 relative flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between gap-4 mb-4">
                 <span className="px-3 py-1 rounded-full text-xs font-mono font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                  Em Produção - Portal &amp; Subdomínio
+                  Em Produção - Portal, Loja Virtual &amp; Subdomínio
                 </span>
                 <span className="text-xs font-mono text-slate-500">WordPress &amp; Web</span>
               </div>
               <h3 className="text-2xl font-bold text-white mb-3">
-                Portal Mensageiros Eternos &amp; Sistema Oficina
+                Portal Mensageiros Eternos, Loja Virtual &amp; Sistema Oficina
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed mb-6">
                 Desenvolvimento completo, estruturação de arquitetura web, administração de
@@ -444,13 +444,13 @@ export default function Projects() {
             </div>
             <div className="flex items-center gap-3 pt-6 border-t border-slate-800">
               <a
-                href="https://github.com/juliodev10"
+                href="https://devcontrole-ten.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white text-xs font-medium transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold transition-colors shadow-sm"
               >
-                <GithubIcon className="w-4 h-4" />
-                <span>Repositório</span>
+                <Globe className="w-4 h-4" />
+                <span>Acessar Plataforma</span>
               </a>
               <span className="text-xs text-slate-400 flex items-center gap-1.5 ml-auto">
                 <CheckCircle className="w-3.5 h-3.5 text-purple-400" />
@@ -502,13 +502,13 @@ export default function Projects() {
             </div>
             <div className="flex items-center gap-3 pt-6 border-t border-slate-800">
               <a
-                href="https://github.com/juliodev10"
+                href="https://fgajuliana.com.br/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white text-xs font-medium transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition-colors shadow-sm"
               >
-                <GithubIcon className="w-4 h-4" />
-                <span>Repositório</span>
+                <Globe className="w-4 h-4" />
+                <span>Acessar Landing Page</span>
               </a>
               <span className="text-xs text-slate-400 flex items-center gap-1.5 ml-auto">
                 <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />

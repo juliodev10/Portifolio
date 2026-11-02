@@ -59,7 +59,7 @@ O projeto foi configurado com arquitetura estática (SSG) de altíssima performa
 1. **Plataforma SaaS Multi-Casamento (Engenharia Moderna com IA):**
    - Arquitetura multi-tenant inspirada no Casar.com com Laravel 11, Filament v3, Livewire e MySQL 8.
    - Conduzido com metodologia **Spec-Driven Development** (`PRD.md`, `FSD.md` e `DECISOES_TECNICAS.md`).
-2. **Portal Mensageiros Eternos & Sistema Oficina (Em Produção):**
+2. **Portal Mensageiros Eternos, Loja Virtual & Sistema Oficina (Em Produção):**
    - Portal web, loja virtual em WordPress (`/loja_virtual/`) e aplicação em subdomínio (`/oficina/`) desenvolvidos em WordPress, PHP e MySQL com gestão completa de DNS, SSL e infraestrutura.
    - [mensageiroseternos.com](https://mensageiroseternos.com/) | [Loja Virtual (WordPress)](https://oficina.mensageiroseternos.com/loja_virtual/) | [oficina.mensageiroseternos.com/oficina/](https://oficina.mensageiroseternos.com/oficina/)
 3. **Administração & Soluções CRM Salesforce (TravelCorp / Leitura Force):**
@@ -67,10 +67,12 @@ O projeto foi configurado com arquitetura estática (SSG) de altíssima performa
 4. **[Gula Lanches (Delivery & Gestão em Produção)](https://gulalanches.foodelivery.ia.br/gulalanches/):**
    - Sistema de delivery para o restaurante Gula Lanches com API oficial do WhatsApp, painel KDS em tempo real para cozinha e controle de caixa.
    - Aplicação em produção: [gulalanches.foodelivery.ia.br/gulalanches/](https://gulalanches.foodelivery.ia.br/gulalanches/)
-5. **OdontoPro / DevControle (SaaS de Gestão em Nuvem):**
+5. **[OdontoPro / DevControle (SaaS de Gestão em Nuvem)](https://devcontrole-ten.vercel.app/):**
    - Aplicação web com Next.js, Auth.js v5, Prisma ORM, MongoDB Atlas e deploy na Vercel.
-6. **Landing Page & Triagem Inteligente (Área da Saúde):**
+   - Aplicação em produção: [devcontrole-ten.vercel.app](https://devcontrole-ten.vercel.app/)
+6. **[Landing Page & Triagem Inteligente (Área da Saúde)](https://fgajuliana.com.br/):**
    - Triagem mobile-first para consultório fonoaudiológico com conversão direcionada para WhatsApp.
+   - Aplicação em produção: [fgajuliana.com.br](https://fgajuliana.com.br/)
 
 ---
 
