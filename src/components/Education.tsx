@@ -35,7 +35,7 @@ export default function Education() {
               </span>
             </div>
             <div className="text-sm font-medium text-indigo-400 mb-3">
-              Universidade Cruzeiro do Sul Virtual
+              Universidade Cruzeiro do Sul
             </div>
             <p className="text-sm text-slate-300 leading-relaxed">
               Formação superior em fundamentos de Ciência da Computação: algoritmos, estruturas de
