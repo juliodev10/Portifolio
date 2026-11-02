@@ -61,8 +61,8 @@ export default function Projects() {
             key={tab.id}
             onClick={() => setActiveCategory(tab.id as ProjectCategory)}
             className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all ${activeCategory === tab.id
-                ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30'
-                : 'bg-slate-900/60 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800/80'
+              ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30'
+              : 'bg-slate-900/60 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800/80'
               }`}
           >
             {tab.label}
@@ -131,13 +131,13 @@ export default function Projects() {
             </div>
             <div className="flex items-center gap-3 pt-6 border-t border-slate-800">
               <a
-                href="https://github.com/juliodev10"
+                href="https://julianaehenrique.social.br/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white text-xs font-medium transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition-colors shadow-sm"
               >
-                <GithubIcon className="w-4 h-4" />
-                <span>Repositório</span>
+                <Globe className="w-4 h-4" />
+                <span>Acessar Plataforma</span>
               </a>
               <span className="text-xs text-slate-400 flex items-center gap-1.5 ml-auto">
                 <CheckCircle className="w-3.5 h-3.5 text-indigo-400" />
@@ -162,7 +162,11 @@ export default function Projects() {
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed mb-6">
                 Desenvolvimento completo, estruturação de arquitetura web, administração de
-                hospedagem, configuração de domínio principal e aplicação dedicada em subdomínio (
+                hospedagem, configuração de domínio principal, loja virtual em WordPress (
+                <code className="text-xs bg-slate-900 px-1 py-0.5 rounded text-sky-300 font-mono">
+                  /loja_virtual/
+                </code>
+                ) e aplicação dedicada em subdomínio (
                 <code className="text-xs bg-slate-900 px-1 py-0.5 rounded text-sky-300 font-mono">
                   /oficina/
                 </code>
@@ -207,6 +211,15 @@ export default function Projects() {
               >
                 <Globe className="w-4 h-4" />
                 <span>Visitar Portal</span>
+              </a>
+              <a
+                href="https://oficina.mensageiroseternos.com/loja_virtual/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold transition-colors shadow-sm"
+              >
+                <ExternalLink className="w-4 h-4" />
+                <span>Loja Virtual (WordPress)</span>
               </a>
               <a
                 href="https://oficina.mensageiroseternos.com/oficina/"
@@ -318,7 +331,7 @@ export default function Projects() {
           </div>
         )}
 
-        {/* PROJETO 4: Food EcoLógico */}
+        {/* PROJETO 4: Gula Lanches */}
         {(activeCategory === 'all' || activeCategory === 'saas' || activeCategory === 'mobile') && (
           <div className="glass-card glass-card-hover rounded-3xl p-8 border border-slate-800 relative flex flex-col justify-between">
             <div>
@@ -328,7 +341,7 @@ export default function Projects() {
                 </span>
                 <span className="text-xs font-mono text-slate-500">Full-Stack / Mobile</span>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-3">Food EcoLógico</h3>
+              <h3 className="text-2xl font-bold text-white mb-3">Gula Lanches</h3>
               <p className="text-sm text-slate-300 leading-relaxed mb-6">
                 Solução completa desenvolvida para restaurante real (Gula Lanches), contando com
                 cardápio digital e pedidos integrados à API do WhatsApp, painel KDS para cozinha,
@@ -367,13 +380,13 @@ export default function Projects() {
             </div>
             <div className="flex items-center gap-3 pt-6 border-t border-slate-800">
               <a
-                href="https://github.com/juliodev10"
+                href="https://gulalanches.foodelivery.ia.br/gulalanches/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white text-xs font-medium transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition-colors shadow-sm"
               >
-                <GithubIcon className="w-4 h-4" />
-                <span>Repositório</span>
+                <Globe className="w-4 h-4" />
+                <span>Acessar Cardápio Online</span>
               </a>
               <span className="text-xs text-slate-400 flex items-center gap-1.5 ml-auto">
                 <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />

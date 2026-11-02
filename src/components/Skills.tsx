@@ -91,6 +91,9 @@ export default function Skills() {
               <span className="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">
                 Tailwind CSS
               </span>
+              <span className="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-purple-300">
+                Bootstrap
+              </span>
               <span className="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">
                 Livewire
               </span>
