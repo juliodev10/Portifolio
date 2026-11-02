@@ -1,15 +1,15 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Mail, Cloud, MapPin, Check, Copy, ArrowUp } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from '@/components/Icons';
+import { Cloud, MapPin, Check, Copy, ArrowUp } from 'lucide-react';
+import { GithubIcon, LinkedinIcon, WhatsAppIcon } from '@/components/Icons';
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
 
-  const copyEmail = (e: React.MouseEvent) => {
+  const copyWhatsApp = (e: React.MouseEvent) => {
     e.preventDefault();
-    navigator.clipboard.writeText('juliofranca490@gmail.com');
+    navigator.clipboard.writeText('35998407525');
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
   };
@@ -42,38 +42,50 @@ export default function Contact() {
 
           {/* Contact Buttons Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-            {/* Email with copy action */}
-            <div className="p-5 rounded-2xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-indigo-500/50 transition-all flex flex-col items-center justify-between gap-3 group">
+            {/* WhatsApp with direct link & copy action */}
+            <div className="p-5 rounded-2xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-emerald-500/50 transition-all flex flex-col items-center justify-between gap-3 group">
               <a
-                href="mailto:juliofranca490@gmail.com"
+                href="https://wa.me/5535998407525"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex flex-col items-center gap-2 w-full"
-                title="Clique para enviar um e-mail"
+                title="Clique para conversar no WhatsApp"
               >
-                <div className="w-11 h-11 rounded-xl bg-indigo-500/10 text-indigo-400 group-hover:scale-110 transition-transform flex items-center justify-center">
-                  <Mail className="w-5 h-5" />
+                <div className="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-400 group-hover:scale-110 transition-transform flex items-center justify-center">
+                  <WhatsAppIcon className="w-5 h-5" />
                 </div>
-                <span className="text-xs font-mono text-slate-400">E-mail Direto</span>
-                <span className="text-sm font-semibold text-white break-all hover:text-indigo-300 transition-colors">
-                  juliofranca490@gmail.com
+                <span className="text-xs font-mono text-slate-400">WhatsApp Direto</span>
+                <span className="text-sm font-semibold text-white group-hover:text-emerald-300 transition-colors">
+                  (35) 99840-7525
                 </span>
               </a>
-              <button
-                onClick={copyEmail}
-                className="mt-1 inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-800 hover:bg-indigo-600/30 border border-slate-700 text-slate-300 text-xs font-mono transition-all"
-                title="Copiar endereço de e-mail"
-              >
-                {copied ? (
-                  <>
-                    <Check className="w-3.5 h-3.5 text-emerald-400" />
-                    <span className="text-emerald-300">Copiado!</span>
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-3.5 h-3.5 text-slate-400" />
-                    <span>Copiar E-mail</span>
-                  </>
-                )}
-              </button>
+              <div className="flex items-center gap-2 mt-1">
+                <a
+                  href="https://wa.me/5535998407525"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-mono transition-all font-semibold shadow-sm"
+                >
+                  <span>Conversar</span>
+                </a>
+                <button
+                  onClick={copyWhatsApp}
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-800 hover:bg-emerald-600/30 border border-slate-700 text-slate-300 text-xs font-mono transition-all"
+                  title="Copiar número do WhatsApp"
+                >
+                  {copied ? (
+                    <>
+                      <Check className="w-3.5 h-3.5 text-emerald-400" />
+                      <span className="text-emerald-300">Copiado!</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-3.5 h-3.5 text-slate-400" />
+                      <span>Copiar</span>
+                    </>
+                  )}
+                </button>
+              </div>
             </div>
 
             {/* GitHub */}

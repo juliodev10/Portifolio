@@ -129,6 +129,6 @@ Este projeto está pronto para deploy instantâneo na Vercel sem configurações
 ## 📬 Contato
 
 - **Nome:** Júlio César França Rodrigues
-- **E-mail:** [juliofranca490@gmail.com](mailto:juliofranca490@gmail.com)
+- **WhatsApp:** [(35) 99840-7525](https://wa.me/5535998407525)
 - **GitHub:** [github.com/juliodev10](https://github.com/juliodev10)
 - **Localização:** Pratápolis - MG (Disponível para estágio Remoto, Híbrido ou Presencial)

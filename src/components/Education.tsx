@@ -31,7 +31,7 @@ export default function Education() {
                 Bacharelado em Ciência da Computação
               </h3>
               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-medium bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 w-fit">
-                Previsão de Conclusão: Dezembro / 2027
+                Previsão de Conclusão: Dezembro / 2028
               </span>
             </div>
             <div className="text-sm font-medium text-indigo-400 mb-3">
